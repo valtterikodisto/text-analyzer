@@ -6,7 +6,8 @@ textsRouter.post('/', (request, response, next) => {
     response.status(400).send({error: 'No text field found'})
   }
 
-  response.json(analyzer(request.body.text))
+  // Since analyzer is case sensitive, we convert the text to lowercase
+  response.json(analyzer(request.body.text.toLowerCase()))
 })
 
 module.exports = textsRouter

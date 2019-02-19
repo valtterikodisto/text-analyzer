@@ -29,7 +29,7 @@ describe('data is received and parsed correctly', async () => {
     const expected = {
       "textLength":{"withSpaces":13,"withoutSpaces":10},
       "wordCount":3,
-      "characterCount":[{"H":1},{"U":1},{"e":1},{"l":2},{"o":1}]
+      "characterCount":[{"e":1},{"h":1},{"l":2},{"o":1},{"u":1}]
     }
     const response = await api
       .post('/analyze')
